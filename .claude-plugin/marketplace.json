@@ -1,0 +1,16 @@
+{
+  "name": "coretica",
+  "owner": {
+    "name": "Front-Line",
+    "email": "contact@frontli.ne.kr"
+  },
+  "metadata": {
+    "description": "Coretica private memory plugin for connected Agents."
+  },
+  "plugins": [
+    {
+      "name": "coretica",
+      "source": "./plugins/coretica"
+    }
+  ]
+}

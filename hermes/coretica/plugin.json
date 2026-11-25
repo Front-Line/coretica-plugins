@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coretica",
+  "version": "0.1.0",
+  "description": "Connect Coretica private memories through MCP. Enable the bundled coretica-memory-rules component for automatic capture guidance.",
+  "author": { "name": "Front-Line", "email": "contact@frontli.ne.kr" },
+  "homepage": "https://coretica.frontli.ne.kr",
+  "repository": "https://github.com/Front-Line/coretica-plugins"
+}

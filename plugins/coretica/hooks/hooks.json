@@ -1,0 +1,29 @@
+{
+  "description": "Load the bundled private memory instructions without reading or forwarding the conversation.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat \"${CLAUDE_PLUGIN_ROOT}/skills/coretica-memory/SKILL.md\"",
+            "timeout": 5,
+            "statusMessage": "Loading Coretica private memory instructions"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat \"${CLAUDE_PLUGIN_ROOT}/skills/coretica-memory/SKILL.md\"",
+            "timeout": 5,
+            "statusMessage": "Loading Coretica private memory instructions"
+          }
+        ]
+      }
+    ]
+  }
+}

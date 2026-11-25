@@ -1,0 +1,8 @@
+manifest_version: 2
+name: coretica-memory-rules
+version: "0.1.0"
+description: "Load Coretica's bundled private-memory instructions into new Hermes sessions. Reads no conversation or credentials."
+author: Front-Line
+homepage: https://coretica.frontli.ne.kr
+requires_plugins:
+  - coretica

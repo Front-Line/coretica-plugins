@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "coretica": {
+      "type": "http",
+      "url": "https://coretica.frontli.ne.kr/mcp/",
+      "bearer_token_env_var": "CORETICA_AGENT_TOKEN"
+    }
+  }
+}

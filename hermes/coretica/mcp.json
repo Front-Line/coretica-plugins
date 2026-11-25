@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "coretica": {
+      "type": "streamable-http",
+      "url": "https://coretica.frontli.ne.kr/mcp/",
+      "headers": { "Authorization": "Bearer ${CORETICA_AGENT_TOKEN}" }
+    }
+  }
+}

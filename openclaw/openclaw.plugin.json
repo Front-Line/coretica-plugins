@@ -1,0 +1,17 @@
+{
+  "id": "coretica",
+  "name": "Coretica",
+  "version": "0.1.0",
+  "description": "Add new user facts and verified activities as private memories without changing existing memories or disclosure permissions.",
+  "activation": { "onStartup": true },
+  "skills": ["./skills"],
+  "configSchema": { "type": "object", "properties": {}, "additionalProperties": false },
+  "mcpServers": {
+    "coretica": {
+      "url": "https://coretica.frontli.ne.kr/mcp/",
+      "transport": "streamable-http",
+      "headers": { "Authorization": "Bearer ${CORETICA_AGENT_TOKEN}" },
+      "requestTimeoutMs": 120000
+    }
+  }
+}
