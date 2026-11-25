@@ -52,8 +52,15 @@ ChatGPT and Claude web do not install these desktop/CLI packages.
 
 ## Hermes
 
-Install both components through Hermes's plugin manager. Choose a reviewed full
-commit SHA from this repository's history and use the same SHA for both components:
+Install both components together through Hermes's plugin manager. The pack pins both
+components to the same reviewed public commit and uses Hermes's normal review prompts:
+
+```sh
+hermes plugins pack install https://raw.githubusercontent.com/Front-Line/coretica-plugins/main/hermes-pack.yaml
+```
+
+Alternatively, choose a reviewed full commit SHA from this repository's history and
+install both components individually using the same SHA:
 
 ```sh
 hermes plugins install https://github.com/Front-Line/coretica-plugins#hermes/coretica --ref <full-commit-sha>

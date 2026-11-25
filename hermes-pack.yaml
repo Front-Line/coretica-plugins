@@ -1,0 +1,11 @@
+name: coretica
+description: Coretica MCP and automatic private-memory guidance
+author: Front-Line
+version: "0.1.0"
+plugins:
+  - repo: Front-Line/coretica-plugins
+    ref: 4f5e4922d63e93103d5ab1f5b4ed9d741efcb30d
+    subdir: hermes/coretica
+  - repo: Front-Line/coretica-plugins
+    ref: 4f5e4922d63e93103d5ab1f5b4ed9d741efcb30d
+    subdir: hermes/coretica-memory-rules
