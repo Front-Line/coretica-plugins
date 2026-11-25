@@ -52,6 +52,10 @@ ChatGPT and Claude web do not install these desktop/CLI packages.
 
 ## Hermes
 
+The [central catalog submission](https://github.com/NousResearch/hermes-agent/pull/160006)
+is awaiting maintainer review. The public Git/pack installation below is available now;
+central search availability is not yet confirmed.
+
 Install both components together through Hermes's plugin manager. The pack pins both
 components to the same reviewed public commit and uses Hermes's normal review prompts:
 
@@ -81,8 +85,9 @@ The MCP endpoint is in `hermes/coretica/mcp.json`. Tested against Hermes commit 
 
 OpenClaw 2026.11.10 or newer is required. The package uses the native plugin API,
 native HTTP MCP, and `before_prompt_build`. Its Node requirement matches that runtime:
-`>=24.22.1 <25 || >=26.12.1`. Registry availability is separate from source availability.
-Until a ClawHub release is available, download or clone this repository and install
+`>=24.22.1 <25 || >=26.12.1`. A ClawHub release has not been published yet. The native
+package passed ClawHub validation and a dry run using its public GitHub source commit.
+Until registry publication and review are complete, download or clone this repository and install
 the reviewed `openclaw` directory through the plugin manager:
 
 ```sh
