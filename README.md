@@ -13,12 +13,28 @@ mean the plugin has been reviewed or listed in an Agent vendor's official direct
 
 1. In Coretica, configure a default information extraction model and consent to its
    processing. The server must support the `remember_user_info` MCP tool.
-2. Create a dedicated Agent connection in **Agent connections → Manual**. Set its
-   token as `CORETICA_AGENT_TOKEN` in the client's secure runtime environment, including
-   the environment of an existing background service. Never paste the token into a
-   chat, repository, command example, or plugin file.
-3. Review the plugin files and the client's normal installation, hook, and tool prompts.
-   Preserve existing connections and unrelated settings. Start a new session after setup.
+2. In **Agent connections**, select Codex, Claude Code, Hermes, or OpenClaw and open
+   **Coretica plugin**. Choose **Create token and prepare prompt**, then copy the
+   complete setup prompt into the Agent you trust to configure this connection.
+   This private prompt includes the actual dedicated connection token. **Manual**
+   remains available if you prefer to create a token and configure the client yourself.
+3. The combined prompt asks the Agent to install or reuse the plugin, configure its
+   MCP connection, persist `CORETICA_AGENT_TOKEN` in the secure environment of the
+   actual launcher, service, or active profile, and complete the required activation
+   steps. Review the package and the client's normal installation, hook, and tool
+   approvals. Preserve unrelated settings and avoid a duplicate manual MCP entry.
+   A temporary export in a tool subprocess does not update the running Agent's
+   environment; restart the existing process or start a new session when required.
+4. Verify the installed plugin, loaded instructions, and a real MCP server response
+   with the expected tools, including `remember_user_info`. Copying a prompt or
+   installing files alone does not confirm a working connection. If the Agent cannot
+   complete a required approval or restart, finish the exact step it reports.
+
+Share the token-containing prompt only with a trusted Agent for this setup. Keep
+credentials out of public repositories, shared examples, plugin packages, logs, and
+URLs. Public installation commands in this README contain no token. The prepared
+token cannot be retrieved again after its Coretica screen is closed; if lost, revoke
+that connection and create a new one.
 
 The default MCP endpoint is `https://coretica.frontli.ne.kr/mcp/`. For another Coretica
 deployment, update only the endpoint while retaining the environment-variable reference.
